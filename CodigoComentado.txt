@@ -1,8 +1,0 @@
-.grid-layout {
-height: 650px;
-display: grid;
-grid-template-columns: auto;
-grid-template-rows: 20% 10% 60%;
-background-color: rgb(145, 41, 243);
-border: 1px solid bisque;
-}

@@ -1,22 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
+    <title>Patitas para el corazón | Adopción de Perritos</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <h1> layoud con Grid</h1>
-    <div class="grid-layout">
-        <div class="caja c1 ">Cabecera</div>
-        <div class="caja c2">Menu</div>
-        <div class="caja c3">Contenido</div>
-        <div class="caja c4">Barra la teral</div>
-        <div class="caja c5">Pie de pagina</div>
-    </div>
-</body>
 
+    <!-- Header / Navegación -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">🐾 Patitas para el corazón</a>
+            <ul class="nav-links">
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Sección Principal / Hero -->
+        <section class="hero">
+            <h1>Regala un hogar lleno de amor</h1>
+            <p>En <strong>Patitas para el corazón</strong> transformamos vidas rescatando peluditos. ¡Haz espacio en tu hogar y adopta!</p>
+        </section>
+
+        <!-- Filtros de búsqueda -->
+        <section class="filter-section">
+            <div class="filter-group">
+                <label for="sex-filter">Sexo:</label>
+                <select id="sex-filter" class="select-input">
+                    <option value="todos">Todos</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Hembra">Hembra</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="age-filter">Edad:</label>
+                <select id="age-filter" class="select-input">
+                    <option value="todas">Todas las edades</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Joven">Joven</option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Sénior">Sénior</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Catálogo de Perritos -->
+        <section id="catalogo" class="catalog-section">
+            <h2>Perritos en busca de familia</h2>
+            <div id="dog-grid" class="dog-grid">
+                <!-- Tarjetas generadas dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Formulario de Adopción -->
+    <div id="adoption-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close" aria-label="Cerrar modal">&times;</button>
+            <h3>Solicitud de Adopción</h3>
+            <p class="modal-subtitle">Estás a un paso de darle un hogar a <strong id="modal-dog-name">---</strong></p>
+
+            <form id="adoption-form" class="adoption-form">
+                <input type="hidden" id="selected-dog-id" name="dogId">
+
+                <div class="form-group">
+                    <label for="applicant-name">Nombre completo *</label>
+                    <input type="text" id="applicant-name" required placeholder="Ej. Ana García">
+                </div>
+
+                <div class="form-group">
+                    <label for="applicant-phone">Teléfono / WhatsApp *</label>
+                    <input type="tel" id="applicant-phone" required placeholder="Ej. +52 55 1234 5678">
+                </div>
+
+                <div class="form-group">
+                    <label for="applicant-email">Correo electrónico *</label>
+                    <input type="email" id="applicant-email" required placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="applicant-message">¿Por qué deseas adoptar a este peludito?</label>
+                    <textarea id="applicant-message" rows="3" placeholder="Cuéntanos un poco sobre tu hogar y tu experiencia con mascotas..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Enviar solicitud</button>
+            </form>
+
+            <div id="form-success-message" class="success-message hidden">
+                <h4>¡Solicitud recibida con éxito! 🎉</h4>
+                <p>El equipo de <strong>Patitas para el corazón</strong> se pondrá en contacto contigo pronto para continuar con el proceso.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2026 Patitas para el corazón. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="index.js"></script>
+</body>
 </html>
