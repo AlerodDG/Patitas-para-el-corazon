@@ -6,17 +6,10 @@
 }
 
 .grid-layout {
-    height: 650px;
-    display: grid;
-    /* grid-template-columns: 80% auto;
-    grid-template-rows: 20% 10% 60%;
-    background-color: #f1b3b3;
-    border: 1px solid black; */
-    grid-template-areas: "cabecera cabecera"
-        "menu menu"
-        "contenido lateral"
-        "footer footer";
-    grid-template-rows: 20% 10% auto 10%;
+height: 650px;
+display: grid;
+grid-template-areas: "cabecera cabecera" "menu menu" "contenido lateral" "footer footer";
+grid-template-rows: 20% 10% auto 10%;
 }
 
 .caja {
@@ -48,7 +41,7 @@
 .c3 {
     grid-area: lateral;
 
-    background-color: hsl(191, 100%, 66%);
+    background-color: hsl(294, 91%, 69%);
 }
 
 .c5 {
